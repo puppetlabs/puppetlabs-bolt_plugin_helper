@@ -1,0 +1,18 @@
+{
+  "name": "puppetlabs-ruby_plugin_helper",
+  "version": "0.1.0",
+  "author": "Puppet, Inc.",
+  "summary": "A helper for writing Bolt plugins in Ruby",
+  "license": "Apache-2.0",
+  "source": "git@github.com/puppetlabs/puppetlabs-bolt_plugin_helper",
+  "dependencies": [],
+  "requirements": [
+    {
+      "name": "bolt",
+      "version_requirement": "< 3.0"
+    }
+  ],
+  "pdk-version": "1.7.0",
+  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
+  "template-ref": "1.7.0-0-g57412ed"
+}
