@@ -120,7 +120,7 @@ def resolve_reference(plugin_config)
   targets = request_targets(client)
   
   # This gets the lookup values that the plugin needs to 'fill in'
-  lookups = required_data(template)
+  attributes = required_data(template)
   target_data = targets.map do |target|
     attributes.each_with_object({}) do |attr, acc|
       attr = attr.first
