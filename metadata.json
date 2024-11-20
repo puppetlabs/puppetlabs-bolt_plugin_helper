@@ -9,9 +9,7 @@
 
   ],
   "operatingsystem_support": [
-    "RedHat based Linux",
-    "Debian based Linux",
-    "Windows"
+
   ],
   "requirements": [
     {
