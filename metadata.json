@@ -1,6 +1,6 @@
 {
   "name": "puppetlabs-ruby_plugin_helper",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "author": "Puppet, Inc.",
   "summary": "A helper for writing Bolt plugins in Ruby",
   "license": "Apache-2.0",
