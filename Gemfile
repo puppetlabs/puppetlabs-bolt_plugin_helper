@@ -35,11 +35,11 @@ group :development do
   gem "rubocop-rspec", '= 2.19.0',               require: false
   gem "rb-readline", '= 0.5.5',                  require: false, platforms: [:mswin, :mingw, :x64_mingw]
   gem "rexml", '>= 3.0.0', '< 3.2.7',            require: false
-  gem 'puppet-upgrade', git: 'https://github.com/puppetlabs/puppet-upgrade.git'
 end
 group :development, :release_prep do
   gem "puppet-strings", '~> 4.0',         require: false
-  gem "puppetlabs_spec_helper", '~> 7.0', require: false
+  gem "puppetlabs_spec_helper", '~> 8.0', require: false
+  gem "puppet-blacksmith", '~> 7.0',      require: false
 end
 group :system_tests do
   gem "puppet_litmus", '~> 1.0',   require: false, platforms: [:ruby, :x64_mingw]
