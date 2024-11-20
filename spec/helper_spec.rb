@@ -11,7 +11,7 @@ describe RubyPluginHelper do
     end
     let(:output) do
       [['public_dns_name'],
-       %w[value with dots]]
+       ['value', 'with', 'dots']]
     end
 
     it 'returns array of values to lookup' do
@@ -37,12 +37,12 @@ describe RubyPluginHelper do
       [{
         'look' => { 'up' => 'name' },
         'user' => { 'strange' => 'user' },
-        'im' => { 'an' => { 'array' => %w[sudo let me in] } }
+        'im' => { 'an' => { 'array' => ['sudo', 'let', 'me', 'in'] } }
       },
        {
          'look' => { 'up' => 'down' },
          'user' => { 'strange' => 'charm' },
-         'im' => { 'an' => { 'array' => %w[sudo top bottom] } }
+         'im' => { 'an' => { 'array' => ['sudo', 'top', 'bottom'] } }
        }]
     end
     let(:output) do
@@ -50,14 +50,14 @@ describe RubyPluginHelper do
          config: {
            ssh: {
              user: 'user',
-             'run-as-command': %w[sudo let me in]
+             'run-as-command': ['sudo', 'let', 'me', 'in']
            }
          } },
        { name: 'down',
          config: {
            ssh: {
              user: 'charm',
-             'run-as-command': %w[sudo top bottom]
+             'run-as-command': ['sudo', 'top', 'bottom']
            }
          } }]
     end
@@ -68,7 +68,7 @@ describe RubyPluginHelper do
 
     it 'raises an error if a lookup is not a string, array, or hash' do
       expect { apply_mapping({ 'int': 2 }, [{ 2 => '2' }]) }
-        .to raise_error(StandardError, /string, array, or hash. Got Integer/)
+        .to raise_error(StandardError, %r{string, array, or hash. Got Integer})
     end
   end
 end
