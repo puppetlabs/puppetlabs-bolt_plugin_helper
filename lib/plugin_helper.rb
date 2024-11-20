@@ -1,3 +1,9 @@
+# The RubyPluginHelper module provides utility methods for processing and applying
+# mappings to data structures, specifically for use with Puppet inventory data.
+# It includes methods for extracting required data lookups from templates and
+# applying these mappings to generate inventory records.
+#
+# @module RubyPluginHelper
 module RubyPluginHelper
   # 'template' is the value of `target_mapping` from the inventory
   # Returns an array of strings which are the lookups from the template
@@ -18,13 +24,11 @@ module RubyPluginHelper
     postwalk_vals(template) do |value|
       if value.is_a?(String)
         segments = value.split('.').map do |segment|
-          begin
-            # Turn it into an integer if we can
-            Integer(segment)
-          rescue ArgumentError
-            # Otherwise return the value
-            segment
-          end
+          # Turn it into an integer if we can
+          Integer(segment)
+        rescue ArgumentError
+          # Otherwise return the value
+          segment
         end
         answer = lookup.dig(*segments)
         if answer.nil? && !accept_nil

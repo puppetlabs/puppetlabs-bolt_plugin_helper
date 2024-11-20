@@ -5,7 +5,14 @@
   "summary": "A helper for writing Bolt plugins in Ruby",
   "license": "Apache-2.0",
   "source": "https://github.com/puppetlabs/puppetlabs-ruby_plugin_helper",
-  "dependencies": [],
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    "RedHat based Linux",
+    "Debian based Linux",
+    "Windows"
+  ],
   "requirements": [
     {
       "name": "bolt",
@@ -16,7 +23,7 @@
       "version_requirement": ">= 6.0.0 < 9.0.0"
     }
   ],
-  "pdk-version": "1.7.0",
-  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
-  "template-ref": "1.7.0-0-g57412ed"
+  "pdk-version": "3.3.0",
+  "template-url": "pdk-default#3.3.0",
+  "template-ref": "tags/3.3.0-0-g5d17ec1"
 }
